@@ -1,0 +1,53 @@
+updates:
+  - name: "All dependencies"
+    targets:
+      - "//..."
+    patches:
+      # Bazel rules (as above)
+      - groupId: "bazel_rules"
+        groupName: "All Bazel rules"
+        patterns:
+          - "^rules_.*"
+          - "^bazel_.*"
+
+      # Testing frameworks
+      - groupId: "testing"
+        groupName: "Testing dependencies"
+        patterns:
+          - "^org\\.junit.*"
+          - "^org\\.mockito.*"
+          - "^org\\.testng.*"
+
+      # Databases
+      - groupId: "databases"
+        groupName: "Database dependencies"
+        patterns:
+          - "^org\\.mongodb.*"
+          - "^mysql.*"
+          - "^org\\.postgresql.*"
+
+      # Spring Framework
+      - groupId: "spring"
+        groupName: "Spring dependencies"
+        patterns:
+          - "^org\\.springframework.*"
+
+      # JSON/XML processing
+      - groupId: "json_xml"
+        groupName: "JSON and XML dependencies"
+        patterns:
+          - "^com\\.fasterxml\\.jackson.*"
+          - "^javax\\.xml.*"
+          - "^org\\.json.*"
+
+      # Catch all other Maven dependencies
+      - groupId: "other_maven"
+        groupName: "Other Maven dependencies"
+        patterns:
+          - ".*"    # This will catch any dependency not caught by above patterns
+
+settings:
+  version:
+    update:
+      # This tells Bazel-steward to suggest both upgrades and downgrades
+      mode: "ANY"

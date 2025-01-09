@@ -1,0 +1,5 @@
+/.ijwb/
+/bazel-bin/
+/bazel-out/
+/bazel-poc-steward-tool-management/
+/bazel-testlogs/
