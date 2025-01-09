@@ -34,7 +34,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run Bazel Steward
-        uses: VirtusLab/bazel-steward@v1.1.0
+        uses: VirtusLab/bazel-steward@v1.5.0
         with:
-          configuration-path: .bazel-steward.yaml  # Fixed parameter name
+          configuration-path: .bazel-steward.yaml
           github-token: ${{ secrets.GITHUB_TOKEN }}
