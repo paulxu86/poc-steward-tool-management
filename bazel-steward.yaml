@@ -1,17 +1,14 @@
-updates:
+# Note the changed structure
+update-rules:
   - name: "Bazel deps"
-    targets:
+    paths:
       - "//..."
-    patches:
-      # Your existing patterns are good
-      - groupId: "bazel_rules"
-        groupName: "All Bazel rules"
-        patterns:
-          - "^rules_.*"
-          - "^bazel_.*"
-
-      - groupId: "maven_deps"
-        groupName: "Maven dependencies"
+    kinds:
+      - name: "bazel_rules"
+        pattern: "^rules_.*"
+      - name: "bazel_dep"
+        pattern: "^bazel_.*"
+      - name: "maven_deps"
         patterns:
           - "^com\\..*"
           - "^org\\..*"
@@ -20,11 +17,13 @@ updates:
 # Add these settings
 settings:
   pullRequests:
-    enabled: true
-    limit: 10  # Maximum number of open PRs
-    branch:
-      prefix: "steward"  # PRs will be created with this prefix
-  commits:
-    message: "chore: update ${groupName} to ${version}"
+  enabled: true
+  limit: 10
+  branch-prefix: "steward"
   labels:
     - "dependencies"
+
+post-update-hooks:
+  - pattern: ".*"
+    commands:
+      - "bazel build //..."

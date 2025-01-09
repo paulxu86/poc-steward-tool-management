@@ -31,10 +31,10 @@ jobs:
   steward:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@v4
 
       - name: Run Bazel Steward
         uses: VirtusLab/bazel-steward@v1.1.0
         with:
+          configuration-path: .bazel-steward.yaml  # Fixed parameter name
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          config-path: bazel-steward.yaml
