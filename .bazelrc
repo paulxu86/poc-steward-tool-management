@@ -2,7 +2,3 @@ build --java_language_version=17
 build --java_runtime_version=17
 build --tool_java_language_version=17
 build --tool_java_runtime_version=17
-
-# GitHub Actions
-common --@maven=@depwatch_maven
-common --registry=https://bcr.bazel.build

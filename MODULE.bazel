@@ -14,7 +14,7 @@ SPRING_BOOT_VERSION = "3.3.7"
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
-    name = "depwatch_maven",
+    name = "maven",
     artifacts = [
         "org.springframework.boot:spring-boot-starter:%s" % SPRING_BOOT_VERSION,
         "org.springframework.boot:spring-boot-starter-web:%s" % SPRING_BOOT_VERSION,
@@ -26,7 +26,7 @@ maven.install(
         "https://repo.maven.apache.org/maven2/",
     ],
 )
-use_repo(maven, "depwatch_maven")
+use_repo(maven, "maven")
 
 # Configure OCI (Docker) repositories
 oci = use_extension("@rules_oci//oci:extensions.bzl", "oci")
