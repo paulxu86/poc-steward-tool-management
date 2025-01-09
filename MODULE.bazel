@@ -22,6 +22,7 @@ maven.install(
         "com.fasterxml.jackson.core:jackson-databind:2.2.4",
     ],
     fail_if_repin_required = False,
+    lock_file = "//:rules_jvm_external~~maven~maven_install.json",
     repositories = [
         "https://repo.maven.apache.org/maven2/",
     ],
