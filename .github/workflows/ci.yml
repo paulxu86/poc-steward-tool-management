@@ -30,11 +30,18 @@ jobs:
 
   steward:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
 
       - name: Run Bazel Steward
-        uses: VirtusLab/bazel-steward@v1.1.0
+        uses: VirtusLab/bazel-steward@v1.5.0
         with:
-          configuration-path: .bazel-steward.yaml  # Fixed parameter name
+          configuration-path: .bazel-steward.yaml
           github-token: ${{ secrets.GITHUB_TOKEN }}

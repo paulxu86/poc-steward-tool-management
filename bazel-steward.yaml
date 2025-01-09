@@ -1,27 +1,46 @@
-# Note the changed structure
 update-rules:
-  - name: "Bazel deps"
-    paths:
-      - "//..."
+  - name: "Bzlmod Dependencies"
     kinds:
-      - name: "bazel_rules"
-        pattern: "^rules_.*"
-      - name: "bazel_dep"
-        pattern: "^bazel_.*"
-      - name: "maven_deps"
-        patterns:
-          - "^com\\..*"
-          - "^org\\..*"
-          - "^io\\..*"
+      - name: "bzlmod"
+        types:
+          - "bazel_dep"
+        modules:
+          - pattern: "rules_.*"
+          - pattern: "aspect_.*"
+    paths:
+      - "MODULE.bazel"
 
-# Add these settings
-settings:
-  pullRequests:
+  - name: "Maven Dependencies"
+    kinds:
+      - name: "maven"
+        types:
+          - "maven.install"
+        artifacts:
+          - "org\\.springframework\\.boot:.*"
+          - "com\\.fasterxml\\.jackson\\.core:.*"
+    paths:
+      - "MODULE.bazel"
+
+pull-requests:
   enabled: true
+  branch-prefix: "steward/"
+  target: "main"
   limit: 10
-  branch-prefix: "steward"
   labels:
     - "dependencies"
+  title-template: "⬆️ Update ${dependency} from ${currentVersion} to ${newVersion}"
+  body-template: |
+    ## Dependency Update
+    
+    📦 Dependency: `${dependency}`
+    📈 Current version: `${currentVersion}`
+    🎯 New version: `${newVersion}`
+    
+    ### Changelog
+    ${changelog}
+    
+    ### Type of update
+    ${updateType}
 
 post-update-hooks:
   - pattern: ".*"
