@@ -1,16 +1,23 @@
 update-rules:
-  - kinds:
-      - "rules_.*"
-      - "bazel_.*"
-      - "maven"
+  - name: "Dependency Updates"  # Add a name for the rule group
+    kinds:
+      - name: "bzl_rules"   # Each kind needs a name
+        pattern: "rules_.*"
+      - name: "bazel_deps"
+        pattern: "bazel_.*"
+      - name: "maven_deps"
+        patterns:          # Maven can have multiple patterns
+          - "^org\\..*"
+          - "^com\\..*"
+          - "^io\\..*"
     paths:
       - "//..."
 
 pull-requests:
-  enabled: true  # Changed from array to object structure
-  limit: 10
+  enabled: true
   branch-prefix: "steward"
-  target: "main"  # Explicitly setting target branch
+  target: "main"
+  limit: 10
   labels:
     - "dependencies"
   title-template: "⬆️ Update ${dependency} from ${currentVersion} to ${newVersion}"
