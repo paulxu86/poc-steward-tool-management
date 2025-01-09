@@ -621,14 +621,15 @@
     "@@rules_jvm_external~//:extensions.bzl%maven": {
       "general": {
         "bzlTransitiveDigest": "IqbIUhKrv84R2Yiln2y4zzhmEohdBQMlbEZK0vmRU2c=",
-        "usagesDigest": "QjSNLwx/3DsuBDJbW1hSLHNmnxx7CquOhb2CPYIsYgY=",
+        "usagesDigest": "AqpSFiPst4TfTbZ5IvvMhOmkVYGzlP1IN0egwvJCBr4=",
         "recordedFileInputs": {
+          "@@//rules_jvm_external~~maven~maven_install.json": "107a060ec26b71d739b880ea2f9a7f2ccbe6d4aa15547837f41164ce28dbdd84",
           "@@rules_jvm_external~//rules_jvm_external_deps_install.json": "cafb5d2d8119391eb2b322ce3840d3352ea82d496bdb8cbd4b6779ec4d044dda"
         },
         "recordedDirentsInputs": {},
         "envVariables": {},
         "generatedRepoSpecs": {
-          "maven": {
+          "unpinned_maven": {
             "bzlFile": "@@rules_jvm_external~//:coursier.bzl",
             "ruleClassName": "coursier_fetch",
             "attributes": {
@@ -643,7 +644,7 @@
                 "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-databind\", \"version\": \"2.2.4\" }"
               ],
               "fail_on_missing_checksum": true,
-              "fetch_sources": false,
+              "fetch_sources": true,
               "fetch_javadoc": false,
               "excluded_artifacts": [],
               "generate_compat_repositories": false,
@@ -653,11 +654,792 @@
               "strict_visibility_value": [
                 "@@//visibility:private"
               ],
+              "maven_install_json": "@@//:rules_jvm_external~~maven~maven_install.json",
               "resolve_timeout": 600,
               "use_starlark_android_rules": false,
               "aar_import_bzl_label": "@build_bazel_rules_android//android:rules.bzl",
               "duplicate_version_warning": "warn",
               "ignore_empty_files": false
+            }
+          },
+          "ch_qos_logback_logback_classic_1_5_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "ebe1a2ce1072b365090d58af40fcb7482d7864a31cd2b1c62c9b1d13f9a80c09",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.5.12/logback-classic-1.5.12.jar"
+              ],
+              "downloaded_file_path": "v1/ch/qos/logback/logback-classic/1.5.12/logback-classic-1.5.12.jar"
+            }
+          },
+          "ch_qos_logback_logback_classic_jar_sources_1_5_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "9f49579e138d5f3006bd961689972764a503f86bd4944e6e5db9a409272e0578",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.5.12/logback-classic-1.5.12-sources.jar"
+              ],
+              "downloaded_file_path": "v1/ch/qos/logback/logback-classic/1.5.12/logback-classic-1.5.12-sources.jar"
+            }
+          },
+          "ch_qos_logback_logback_core_1_5_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "3f35b41621c2cbf72a9d9f3ce2270ba2040e4808bd6befdd720866e926d3e84a",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.5.12/logback-core-1.5.12.jar"
+              ],
+              "downloaded_file_path": "v1/ch/qos/logback/logback-core/1.5.12/logback-core-1.5.12.jar"
+            }
+          },
+          "ch_qos_logback_logback_core_jar_sources_1_5_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "7269d6e110b6c11a79f213509790ae9924e94519e5ee59e1ff76546e61c3329a",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.5.12/logback-core-1.5.12-sources.jar"
+              ],
+              "downloaded_file_path": "v1/ch/qos/logback/logback-core/1.5.12/logback-core-1.5.12-sources.jar"
+            }
+          },
+          "com_fasterxml_jackson_core_jackson_annotations_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "2747f60343783a6ec8a68405c7c839fa0bbe30ee4e2459d21a1ac3b7365e1ed5",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.17.3/jackson-annotations-2.17.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-annotations/2.17.3/jackson-annotations-2.17.3.jar"
+            }
+          },
+          "com_fasterxml_jackson_core_jackson_annotations_jar_sources_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "91ac008e053c92e14c8bcbb7b038cbf84b4ce6bc316ca01292cc508669a7e78d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.17.3/jackson-annotations-2.17.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-annotations/2.17.3/jackson-annotations-2.17.3-sources.jar"
+            }
+          },
+          "com_fasterxml_jackson_core_jackson_core_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "19e03ee71f00a86255fa3c980560b231e1305486f6482c905601209014f5870c",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.3/jackson-core-2.17.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-core/2.17.3/jackson-core-2.17.3.jar"
+            }
+          },
+          "com_fasterxml_jackson_core_jackson_core_jar_sources_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "f6576b4d62d88ea4fce22d1233751aa15e58a93468e7caf36d55a4717e152b66",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.3/jackson-core-2.17.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-core/2.17.3/jackson-core-2.17.3-sources.jar"
+            }
+          },
+          "com_fasterxml_jackson_core_jackson_databind_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "93b13e709a0b620de42019180a75bc1fc4885c81fe5b6087a4aa248f91fb9a95",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.17.3/jackson-databind-2.17.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-databind/2.17.3/jackson-databind-2.17.3.jar"
+            }
+          },
+          "com_fasterxml_jackson_core_jackson_databind_jar_sources_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "c940a857cd2d75a7d4fd76a224893fb6e5806f6986dddf41f7f9ba503d26dea9",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.17.3/jackson-databind-2.17.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-databind/2.17.3/jackson-databind-2.17.3-sources.jar"
+            }
+          },
+          "com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "b7207c1df9d89e95efd23793d3a13b1295bec0d9be58b3582ea0dff6cb096fa2",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.3/jackson-datatype-jdk8-2.17.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.3/jackson-datatype-jdk8-2.17.3.jar"
+            }
+          },
+          "com_fasterxml_jackson_datatype_jackson_datatype_jdk8_jar_sources_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d2bc2bef56a33126b6add8f92b290ba55f51b67328e2a287b24ad5a5cd7ae939",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.3/jackson-datatype-jdk8-2.17.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.3/jackson-datatype-jdk8-2.17.3-sources.jar"
+            }
+          },
+          "com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "b1e3e4be52f69ecf6442d8a07e96ddd200bacb1867cb47460ade87710552a9ee",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.3/jackson-datatype-jsr310-2.17.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.3/jackson-datatype-jsr310-2.17.3.jar"
+            }
+          },
+          "com_fasterxml_jackson_datatype_jackson_datatype_jsr310_jar_sources_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "e9526642eac4df8d2567de1639e7cdcf550fa4153e190d94ffbbbb060a5e107f",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.3/jackson-datatype-jsr310-2.17.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.3/jackson-datatype-jsr310-2.17.3-sources.jar"
+            }
+          },
+          "com_fasterxml_jackson_module_jackson_module_parameter_names_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "f736404f3a4dc554e7ec816caccfebc68e65d402c2de7ec3c4438f6895179467",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.3/jackson-module-parameter-names-2.17.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.3/jackson-module-parameter-names-2.17.3.jar"
+            }
+          },
+          "com_fasterxml_jackson_module_jackson_module_parameter_names_jar_sources_2_17_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "0919249e41017e15533c7c74bc64d5d7d597e3d1d11129a9039e8bdf136712f2",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.3/jackson-module-parameter-names-2.17.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.3/jackson-module-parameter-names-2.17.3-sources.jar"
+            }
+          },
+          "io_micrometer_micrometer_commons_1_12_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "21e27da09986a9ef60cf0d6cfb6550f9ef77ddb4a20dd6cca576b7213257c3f0",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.12.12/micrometer-commons-1.12.12.jar"
+              ],
+              "downloaded_file_path": "v1/io/micrometer/micrometer-commons/1.12.12/micrometer-commons-1.12.12.jar"
+            }
+          },
+          "io_micrometer_micrometer_commons_jar_sources_1_12_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "a104f626afec454524fd462972e7a9ed884ea90bd0ea7dd0e9f215d6010bc0b3",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.12.12/micrometer-commons-1.12.12-sources.jar"
+              ],
+              "downloaded_file_path": "v1/io/micrometer/micrometer-commons/1.12.12/micrometer-commons-1.12.12-sources.jar"
+            }
+          },
+          "io_micrometer_micrometer_observation_1_12_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "6c1b87d4401f120944c7220194f7537896b7a3b9385353c4d24b603660247e8f",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.12.12/micrometer-observation-1.12.12.jar"
+              ],
+              "downloaded_file_path": "v1/io/micrometer/micrometer-observation/1.12.12/micrometer-observation-1.12.12.jar"
+            }
+          },
+          "io_micrometer_micrometer_observation_jar_sources_1_12_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "9d085199956a050e912948bbd0f0a66e8962431c5ad03814cd29d6dc983a78b9",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.12.12/micrometer-observation-1.12.12-sources.jar"
+              ],
+              "downloaded_file_path": "v1/io/micrometer/micrometer-observation/1.12.12/micrometer-observation-1.12.12-sources.jar"
+            }
+          },
+          "jakarta_annotation_jakarta_annotation_api_2_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar"
+              ],
+              "downloaded_file_path": "v1/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar"
+            }
+          },
+          "jakarta_annotation_jakarta_annotation_api_jar_sources_2_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "4b8abc5d33e33ad0cc53588532dafece90135cc83629429534af1c0900747094",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1-sources.jar"
+            }
+          },
+          "org_apache_logging_log4j_log4j_api_2_23_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "92ec1fd36ab3bc09de6198d2d7c0914685c0f7127ea931acc32fd2ecdd82ea89",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar"
+            }
+          },
+          "org_apache_logging_log4j_log4j_api_jar_sources_2_23_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d5cf646b25ee4ee16b27aea90d919aa0b35846feae811abc8cb389331420a059",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1-sources.jar"
+            }
+          },
+          "org_apache_logging_log4j_log4j_to_slf4j_2_23_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "7937a84055156910234e3b42868f55e68ff4b7becbb6ffd10146f72f5bf54dd5",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar"
+            }
+          },
+          "org_apache_logging_log4j_log4j_to_slf4j_jar_sources_2_23_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "44ca8000664bb30ebcd507d388df092632de7214f439b891f59445fcc4686cfa",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1-sources.jar"
+            }
+          },
+          "org_apache_tomcat_embed_tomcat_embed_core_10_1_34": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "5817bbb6c3a8d405a9f51ea0d402786114b4e8fd6d7ac4dd23ca34ac8d38a593",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.34/tomcat-embed-core-10.1.34.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-core/10.1.34/tomcat-embed-core-10.1.34.jar"
+            }
+          },
+          "org_apache_tomcat_embed_tomcat_embed_core_jar_sources_10_1_34": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "5d09f576381ce1e74c0b141e11d84bb51a3ee0f92d9ac88bb8e012f7677f102e",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.34/tomcat-embed-core-10.1.34-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-core/10.1.34/tomcat-embed-core-10.1.34-sources.jar"
+            }
+          },
+          "org_apache_tomcat_embed_tomcat_embed_el_10_1_34": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "54f10ed773387621f5c4fb7e526c2d1674f5d72fc4d86ed87238a750b7fdbfa0",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.34/tomcat-embed-el-10.1.34.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-el/10.1.34/tomcat-embed-el-10.1.34.jar"
+            }
+          },
+          "org_apache_tomcat_embed_tomcat_embed_el_jar_sources_10_1_34": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "cd9c689397909df6d730ce362cb817765e3ffb6b1dbe6343b1e3329bd37ae148",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.34/tomcat-embed-el-10.1.34-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-el/10.1.34/tomcat-embed-el-10.1.34-sources.jar"
+            }
+          },
+          "org_apache_tomcat_embed_tomcat_embed_websocket_10_1_34": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "acbb59e0ada75ecc5d82a0513d453f036d87b53eed3c6537db3fbcb54105454b",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.34/tomcat-embed-websocket-10.1.34.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.34/tomcat-embed-websocket-10.1.34.jar"
+            }
+          },
+          "org_apache_tomcat_embed_tomcat_embed_websocket_jar_sources_10_1_34": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "fd330ee4692cfd01daafe5f3fcd4438ad38b4a6c0c891c10ec569bd0e5b1bcdf",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.34/tomcat-embed-websocket-10.1.34-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.34/tomcat-embed-websocket-10.1.34-sources.jar"
+            }
+          },
+          "org_slf4j_jul_to_slf4j_2_0_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "0f2ec396ea29c9a440890d1f09fdb82fdd574b47b298435764235451c193861d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar"
+            }
+          },
+          "org_slf4j_jul_to_slf4j_jar_sources_2_0_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "540a1cf702bb02e54c8d8c7d44f1d5b7b1c97374b613be3e7eb9f86715cef788",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16-sources.jar"
+            }
+          },
+          "org_slf4j_slf4j_api_2_0_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "a12578dde1ba00bd9b816d388a0b879928d00bab3c83c240f7013bf4196c579a",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar"
+            }
+          },
+          "org_slf4j_slf4j_api_jar_sources_2_0_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d938ad56953d65bd0806f75d17535fa32b1fc5078051212e0b010f69ec43f8cb",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "3e9c6b669f5caa44d9d1b43b0d013b8a2d10b19996afba8528fb7ffb30674948",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.3.7/spring-boot-3.3.7.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot/3.3.7/spring-boot-3.3.7.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_jar_sources_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "1f6fe0d78954f3abad8eef8a255a8baac4a706b66fd9cbc1b2c1ab46ae50c2ce",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.3.7/spring-boot-3.3.7-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot/3.3.7/spring-boot-3.3.7-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_autoconfigure_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "2c0c38050800f0003d300f9d7590dfdd336a20192cd3d6a4fdfe3a49a5423506",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.7/spring-boot-autoconfigure-3.3.7.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-autoconfigure/3.3.7/spring-boot-autoconfigure-3.3.7.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_autoconfigure_jar_sources_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "491cc6c6617e10bd796fbdc189a745d149676eb9f8f498d34e4cea9d331b3a61",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.7/spring-boot-autoconfigure-3.3.7-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-autoconfigure/3.3.7/spring-boot-autoconfigure-3.3.7-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "53765a7c84ab4b215b103edb50b39e3c7194346f37c46363e3fd503575b455c2",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.3.7/spring-boot-starter-3.3.7.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter/3.3.7/spring-boot-starter-3.3.7.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_jar_sources_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d1c88e5bb5bbfacffe82d1eb35f527d9e31adeb37c0fe94ab83fb1158527195a",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.3.7/spring-boot-starter-3.3.7-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter/3.3.7/spring-boot-starter-3.3.7-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_json_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "5993e61b88dc5c95d086935d677ac3e602d6511a3e563f75ccc25a8f8a546e0d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.7/spring-boot-starter-json-3.3.7.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-json/3.3.7/spring-boot-starter-json-3.3.7.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_json_jar_sources_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "de2925dd36a1db640978bd6188301ca4f23162b219cf51efcbee767ad0cf6295",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.7/spring-boot-starter-json-3.3.7-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-json/3.3.7/spring-boot-starter-json-3.3.7-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_logging_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "03dd7c431f4066d940acf4be3938a3bcb4545a7735bf0e9b2ad85988910f35cf",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.7/spring-boot-starter-logging-3.3.7.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-logging/3.3.7/spring-boot-starter-logging-3.3.7.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_logging_jar_sources_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "ecbd8043d9ef9353eca27611fe446ab594ebde4f1e65b1c18076eee92234e023",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.7/spring-boot-starter-logging-3.3.7-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-logging/3.3.7/spring-boot-starter-logging-3.3.7-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_tomcat_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "ea689f193710ec946eb4b147db290770a43572d632044b0eab8cc4354a46397d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.3.7/spring-boot-starter-tomcat-3.3.7.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-tomcat/3.3.7/spring-boot-starter-tomcat-3.3.7.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_tomcat_jar_sources_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "f1cfa43013e9c82565b910a473d4b7dedee1a4a637af53ed5c7819d5a8196858",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.3.7/spring-boot-starter-tomcat-3.3.7-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-tomcat/3.3.7/spring-boot-starter-tomcat-3.3.7-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_web_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "21804a95d783768aca38d9347e955b97bfbd47a0b1232a188da767159c233634",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.3.7/spring-boot-starter-web-3.3.7.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-web/3.3.7/spring-boot-starter-web-3.3.7.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_web_jar_sources_3_3_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "7f037027dc8b93d4803f1e38a0624e595a0a525f20d0a7e6836ba3b612f9b1a3",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.3.7/spring-boot-starter-web-3.3.7-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-web/3.3.7/spring-boot-starter-web-3.3.7-sources.jar"
+            }
+          },
+          "org_springframework_spring_aop_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "72ba9a26f28e7794bddf5420652f281e03e3db2571499c96f27e766e61e4edf2",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.16/spring-aop-6.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-aop/6.1.16/spring-aop-6.1.16.jar"
+            }
+          },
+          "org_springframework_spring_aop_jar_sources_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "cac76d946866747879e608b97b053dd92fe4597fc102ae943bf0323b0d20593d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.16/spring-aop-6.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-aop/6.1.16/spring-aop-6.1.16-sources.jar"
+            }
+          },
+          "org_springframework_spring_beans_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d39a5c5fce6f3a396cfa6f6dfb08841ae69c3080f2a5326f89b6a762d582c731",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.16/spring-beans-6.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-beans/6.1.16/spring-beans-6.1.16.jar"
+            }
+          },
+          "org_springframework_spring_beans_jar_sources_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "6a5674e86a5a6100649340b9c9ee32c365c2c578966bb7b24abda9f18dbe0644",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.16/spring-beans-6.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-beans/6.1.16/spring-beans-6.1.16-sources.jar"
+            }
+          },
+          "org_springframework_spring_context_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "7ef52b8a13cb85c1936e03e93849a88af8d49c0fe62caf6fcec937fbaa5518e3",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.16/spring-context-6.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-context/6.1.16/spring-context-6.1.16.jar"
+            }
+          },
+          "org_springframework_spring_context_jar_sources_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "50d1597abbfc9bcaee18fc4624d9adf30cf518b3dcb006b6e6250b83ab0ae17c",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.16/spring-context-6.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-context/6.1.16/spring-context-6.1.16-sources.jar"
+            }
+          },
+          "org_springframework_spring_core_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d83d5e6d2505b52679aa13ba8ec9e1bc15759043080b35ce3c7c2d6d3e55492d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.16/spring-core-6.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-core/6.1.16/spring-core-6.1.16.jar"
+            }
+          },
+          "org_springframework_spring_core_jar_sources_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "dd8e5113efaf51aa32ebb69e6d30f0e72c5be94bc409a69a2256f6dac42c77ba",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.16/spring-core-6.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-core/6.1.16/spring-core-6.1.16-sources.jar"
+            }
+          },
+          "org_springframework_spring_expression_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "f84792069e195157d8dd8eb977283386f21700859f3004aab43449ee1430c9a6",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.16/spring-expression-6.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-expression/6.1.16/spring-expression-6.1.16.jar"
+            }
+          },
+          "org_springframework_spring_expression_jar_sources_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "6d3b94e675eae90a41b55b834d8a9125740af650a8446f6673c01b8cad4c7248",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.16/spring-expression-6.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-expression/6.1.16/spring-expression-6.1.16-sources.jar"
+            }
+          },
+          "org_springframework_spring_jcl_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "9f70a0594effecc06381518f05e5d2d83af252c3239a5234a25d09190d3e620d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.16/spring-jcl-6.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-jcl/6.1.16/spring-jcl-6.1.16.jar"
+            }
+          },
+          "org_springframework_spring_jcl_jar_sources_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "9189fa7074523f5e7fce7d97043b843df79d461ecd81e90d17997762eb2a047c",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.16/spring-jcl-6.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-jcl/6.1.16/spring-jcl-6.1.16-sources.jar"
+            }
+          },
+          "org_springframework_spring_web_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "add65222b3888803ba0e0b31b3dfb6c156053497c8a22e89c164eddbd2e0baef",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.16/spring-web-6.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-web/6.1.16/spring-web-6.1.16.jar"
+            }
+          },
+          "org_springframework_spring_web_jar_sources_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "85e5b9c18a58a224a00ae33e5ea84b533228e098b77212eb88c826bef00d830d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.16/spring-web-6.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-web/6.1.16/spring-web-6.1.16-sources.jar"
+            }
+          },
+          "org_springframework_spring_webmvc_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "f383a6f4d159111ea184441ec37c07113df470ad86cc42a3b0afe83b13c25ee8",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.16/spring-webmvc-6.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-webmvc/6.1.16/spring-webmvc-6.1.16.jar"
+            }
+          },
+          "org_springframework_spring_webmvc_jar_sources_6_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "c579cc649caf8993d5ca9c7ec851cf28ea3b3e6969447592aedb02de954f9f38",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.16/spring-webmvc-6.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-webmvc/6.1.16/spring-webmvc-6.1.16-sources.jar"
+            }
+          },
+          "org_yaml_snakeyaml_2_2": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "1467931448a0817696ae2805b7b8b20bfb082652bf9c4efaed528930dc49389b",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar"
+              ],
+              "downloaded_file_path": "v1/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar"
+            }
+          },
+          "org_yaml_snakeyaml_jar_sources_2_2": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "8f7cf911cf63db55fd980a926d155bd846317737351a2f48ef1c1088c414538a",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.2/snakeyaml-2.2-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/yaml/snakeyaml/2.2/snakeyaml-2.2-sources.jar"
+            }
+          },
+          "maven": {
+            "bzlFile": "@@rules_jvm_external~//:coursier.bzl",
+            "ruleClassName": "pinned_coursier_fetch",
+            "attributes": {
+              "user_provided_name": "maven",
+              "repositories": [
+                "{ \"repo_url\": \"https://repo.maven.apache.org/maven2/\" }"
+              ],
+              "artifacts": [
+                "{ \"group\": \"org.springframework.boot\", \"artifact\": \"spring-boot-starter\", \"version\": \"3.3.7\" }",
+                "{ \"group\": \"org.springframework.boot\", \"artifact\": \"spring-boot-starter-web\", \"version\": \"3.3.7\" }",
+                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-annotations\", \"version\": \"2.2.4\" }",
+                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-databind\", \"version\": \"2.2.4\" }"
+              ],
+              "fetch_sources": true,
+              "fetch_javadoc": false,
+              "generate_compat_repositories": false,
+              "maven_install_json": "@@//:rules_jvm_external~~maven~maven_install.json",
+              "override_targets": {},
+              "strict_visibility": false,
+              "strict_visibility_value": [
+                "@@//visibility:private"
+              ],
+              "additional_netrc_lines": [],
+              "fail_if_repin_required": true,
+              "use_starlark_android_rules": false,
+              "aar_import_bzl_label": "@build_bazel_rules_android//android:rules.bzl",
+              "duplicate_version_warning": "warn",
+              "excluded_artifacts": [],
+              "repin_instructions": ""
             }
           },
           "unpinned_rules_jvm_external_deps": {
@@ -2510,462 +3292,6 @@
             "rules_python~",
             "bazel_tools",
             "bazel_tools"
-          ]
-        ]
-      }
-    },
-    "@@rules_python~//python/extensions/private:internal_deps.bzl%internal_deps": {
-      "general": {
-        "bzlTransitiveDigest": "HZia2x2zClxBbkyhPtNWVBPeKOTV8j7xJuwILyef0YY=",
-        "usagesDigest": "9RSsqSb2/36w50hPv3LjfktbwXR/5SiHNcdkp4m2BVA=",
-        "recordedFileInputs": {},
-        "recordedDirentsInputs": {},
-        "envVariables": {},
-        "generatedRepoSpecs": {
-          "pypi__build": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/03/97/f58c723ff036a8d8b4d3115377c0a37ed05c1f68dd9a0d66dab5e82c5c1c/build-0.9.0-py3-none-any.whl",
-              "sha256": "38a7a2b7a0bdc61a42a0a67509d88c71ecfc37b393baba770fae34e20929ff69",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__click": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/76/0a/b6c5f311e32aeb3b406e03c079ade51e905ea630fc19d1262a46249c1c86/click-8.0.1-py3-none-any.whl",
-              "sha256": "fba402a4a47334742d782209a7c79bc448911afe1149d07bdabdf480b3e2f4b6",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__colorama": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl",
-              "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__installer": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/e5/ca/1172b6638d52f2d6caa2dd262ec4c811ba59eee96d54a7701930726bce18/installer-0.7.0-py3-none-any.whl",
-              "sha256": "05d1933f0a5ba7d8d6296bb6d5018e7c94fa473ceb10cf198a92ccea19c27b53",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__packaging": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/8f/7b/42582927d281d7cb035609cd3a543ffac89b74f3f4ee8e1c50914bcb57eb/packaging-22.0-py3-none-any.whl",
-              "sha256": "957e2148ba0e1a3b282772e791ef1d8083648bc131c8ab0c1feba110ce1146c3",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__pep517": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/ee/2f/ef63e64e9429111e73d3d6cbee80591672d16f2725e648ebc52096f3d323/pep517-0.13.0-py3-none-any.whl",
-              "sha256": "4ba4446d80aed5b5eac6509ade100bff3e7943a8489de249654a5ae9b33ee35b",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__pip": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/09/bd/2410905c76ee14c62baf69e3f4aa780226c1bbfc9485731ad018e35b0cb5/pip-22.3.1-py3-none-any.whl",
-              "sha256": "908c78e6bc29b676ede1c4d57981d490cb892eb45cd8c214ab6298125119e077",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__pip_tools": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/5e/e8/f6d7d1847c7351048da870417724ace5c4506e816b38db02f4d7c675c189/pip_tools-6.12.1-py3-none-any.whl",
-              "sha256": "f0c0c0ec57b58250afce458e2e6058b1f30a4263db895b7d72fd6311bf1dc6f7",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__setuptools": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/7c/5b/3d92b9f0f7ca1645cba48c080b54fe7d8b1033a4e5720091d1631c4266db/setuptools-60.10.0-py3-none-any.whl",
-              "sha256": "782ef48d58982ddb49920c11a0c5c9c0b02e7d7d1c2ad0aa44e1a1e133051c96",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__tomli": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl",
-              "sha256": "939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__wheel": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/bd/7c/d38a0b30ce22fc26ed7dbc087c6d00851fb3395e9d0dac40bec1f905030c/wheel-0.38.4-py3-none-any.whl",
-              "sha256": "b60533f3f5d530e971d6737ca6d58681ee434818fab630c83a734bb10c083ce8",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__importlib_metadata": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/d7/31/74dcb59a601b95fce3b0334e8fc9db758f78e43075f22aeb3677dfb19f4c/importlib_metadata-1.4.0-py2.py3-none-any.whl",
-              "sha256": "bdd9b7c397c273bcc9a11d6629a38487cd07154fa255a467bf704cd2c258e359",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__zipp": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/f4/50/cc72c5bcd48f6e98219fc4a88a5227e9e28b81637a99c49feba1d51f4d50/zipp-1.0.0-py2.py3-none-any.whl",
-              "sha256": "8dda78f06bd1674bd8720df8a50bb47b6e1233c503a4eed8e7810686bde37656",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__more_itertools": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "url": "https://files.pythonhosted.org/packages/bd/3f/c4b3dbd315e248f84c388bd4a72b131a29f123ecacc37ffb2b3834546e42/more_itertools-8.13.0-py3-none-any.whl",
-              "sha256": "c5122bffc5f104d37c1626b8615b511f3427aa5389b94d61e5ef8236bfbc3ddb",
-              "type": "zip",
-              "build_file_content": "package(default_visibility = [\"//visibility:public\"])\n\nload(\"@rules_python//python:defs.bzl\", \"py_library\")\n\npy_library(\n    name = \"lib\",\n    srcs = glob([\"**/*.py\"]),\n    data = glob([\"**/*\"], exclude=[\n        # These entries include those put into user-installed dependencies by\n        # data_exclude in /python/pip_install/tools/bazel.py\n        # to avoid non-determinism following pip install's behavior.\n        \"**/*.py\",\n        \"**/*.pyc\",\n        \"**/* *\",\n        \"**/*.dist-info/RECORD\",\n        \"BUILD\",\n        \"WORKSPACE\",\n    ]),\n    # This makes this directory a top-level in the python import\n    # search path for anything that depends on this.\n    imports = [\".\"],\n)\n"
-            }
-          },
-          "pypi__coverage_cp38_aarch64-apple-darwin": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "3d376df58cc111dc8e21e3b6e24606b5bb5dee6024f46a5abca99124b2229ef5",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/28/d7/9a8de57d87f4bbc6f9a6a5ded1eaac88a89bf71369bb935dac3c0cf2893e/coverage-7.2.7-cp38-cp38-macosx_11_0_arm64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp38_aarch64-unknown-linux-gnu": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "5e330fc79bd7207e46c7d7fd2bb4af2963f5f635703925543a70b99574b0fea9",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/c8/e4/e6182e4697665fb594a7f4e4f27cb3a4dd00c2e3d35c5c706765de8c7866/coverage-7.2.7-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp38_x86_64-apple-darwin": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "54b896376ab563bd38453cecb813c295cf347cf5906e8b41d340b0321a5433e5",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/c6/fc/be19131010930a6cf271da48202c8cc1d3f971f68c02fb2d3a78247f43dc/coverage-7.2.7-cp38-cp38-macosx_10_9_x86_64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp38_x86_64-unknown-linux-gnu": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "8d13c64ee2d33eccf7437961b6ea7ad8673e2be040b4f7fd4fd4d4d28d9ccb1e",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/44/55/49f65ccdd4dfd6d5528e966b28c37caec64170c725af32ab312889d2f857/coverage-7.2.7-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp39_aarch64-apple-darwin": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "06fb182e69f33f6cd1d39a6c597294cff3143554b64b9825d1dc69d18cc2fff2",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/ca/0c/3dfeeb1006c44b911ee0ed915350db30325d01808525ae7cc8d57643a2ce/coverage-7.2.7-cp39-cp39-macosx_11_0_arm64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp39_aarch64-unknown-linux-gnu": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "201e7389591af40950a6480bd9edfa8ed04346ff80002cec1a66cac4549c1ad7",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/61/af/5964b8d7d9a5c767785644d9a5a63cacba9a9c45cc42ba06d25895ec87be/coverage-7.2.7-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp39_x86_64-apple-darwin": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "537891ae8ce59ef63d0123f7ac9e2ae0fc8b72c7ccbe5296fec45fd68967b6c9",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/88/da/495944ebf0ad246235a6bd523810d9f81981f9b81c6059ba1f56e943abe0/coverage-7.2.7-cp39-cp39-macosx_10_9_x86_64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp39_x86_64-unknown-linux-gnu": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "6f48351d66575f535669306aa7d6d6f71bc43372473b54a832222803eb956fd1",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/fe/57/e4f8ad64d84ca9e759d783a052795f62a9f9111585e46068845b1cb52c2b/coverage-7.2.7-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp310_aarch64-apple-darwin": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "6d040ef7c9859bb11dfeb056ff5b3872436e3b5e401817d87a31e1750b9ae2fb",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/3d/80/7060a445e1d2c9744b683dc935248613355657809d6c6b2716cdf4ca4766/coverage-7.2.7-cp310-cp310-macosx_11_0_arm64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp310_aarch64-unknown-linux-gnu": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "ba90a9563ba44a72fda2e85302c3abc71c5589cea608ca16c22b9804262aaeb6",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/b8/9d/926fce7e03dbfc653104c2d981c0fa71f0572a9ebd344d24c573bd6f7c4f/coverage-7.2.7-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp310_x86_64-apple-darwin": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "d39b5b4f2a66ccae8b7263ac3c8170994b65266797fb96cbbfd3fb5b23921db8",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/01/24/be01e62a7bce89bcffe04729c540382caa5a06bee45ae42136c93e2499f5/coverage-7.2.7-cp310-cp310-macosx_10_9_x86_64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp310_x86_64-unknown-linux-gnu": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "31563e97dae5598556600466ad9beea39fb04e0229e61c12eaa206e0aa202063",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/b4/bd/1b2331e3a04f4cc9b7b332b1dd0f3a1261dfc4114f8479bebfcc2afee9e8/coverage-7.2.7-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp311_aarch64-apple-darwin": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "5baa06420f837184130752b7c5ea0808762083bf3487b5038d68b012e5937dbe",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/67/d7/cd8fe689b5743fffac516597a1222834c42b80686b99f5b44ef43ccc2a43/coverage-7.2.7-cp311-cp311-macosx_11_0_arm64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp311_aarch64-unknown-linux-gnu": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "fdec9e8cbf13a5bf63290fc6013d216a4c7232efb51548594ca3631a7f13c3a3",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/8c/95/16eed713202406ca0a37f8ac259bbf144c9d24f9b8097a8e6ead61da2dbb/coverage-7.2.7-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp311_x86_64-apple-darwin": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "06a9a2be0b5b576c3f18f1a241f0473575c4a26021b52b2a85263a00f034d51f",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/c6/fa/529f55c9a1029c840bcc9109d5a15ff00478b7ff550a1ae361f8745f8ad5/coverage-7.2.7-cp311-cp311-macosx_10_9_x86_64.whl"
-              ]
-            }
-          },
-          "pypi__coverage_cp311_x86_64-unknown-linux-gnu": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_archive",
-            "attributes": {
-              "build_file_content": "\nfilegroup(\n    name = \"coverage\",\n    srcs = [\"coverage/__main__.py\"],\n    data = glob([\"coverage/*.py\", \"coverage/**/*.py\", \"coverage/*.so\"]),\n    visibility = [\"//visibility:public\"],\n)\n    ",
-              "patch_args": [
-                "-p1"
-              ],
-              "patches": [
-                "@@rules_python~//python/private:coverage.patch"
-              ],
-              "sha256": "63426706118b7f5cf6bb6c895dc215d8a418d5952544042c8a2d9fe87fcf09cb",
-              "type": "zip",
-              "urls": [
-                "https://files.pythonhosted.org/packages/a7/cd/3ce94ad9d407a052dc2a74fbeb1c7947f442155b28264eb467ee78dea812/coverage-7.2.7-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
-              ]
-            }
-          }
-        },
-        "recordedRepoMappingEntries": [
-          [
-            "rules_python~",
-            "bazel_skylib",
-            "bazel_skylib~"
-          ],
-          [
-            "rules_python~",
-            "bazel_tools",
-            "bazel_tools"
-          ],
-          [
-            "rules_python~",
-            "rules_python",
-            "rules_python~"
           ]
         ]
       }
