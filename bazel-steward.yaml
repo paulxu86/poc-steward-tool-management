@@ -1,0 +1,29 @@
+# Note the changed structure
+update-rules:
+  - name: "Bazel deps"
+    paths:
+      - "//..."
+    kinds:
+      - name: "bazel_rules"
+        pattern: "^rules_.*"
+      - name: "bazel_dep"
+        pattern: "^bazel_.*"
+      - name: "maven_deps"
+        patterns:
+          - "^com\\..*"
+          - "^org\\..*"
+          - "^io\\..*"
+
+# Add these settings
+settings:
+  pullRequests:
+  enabled: true
+  limit: 10
+  branch-prefix: "steward"
+  labels:
+    - "dependencies"
+
+post-update-hooks:
+  - pattern: ".*"
+    commands:
+      - "bazel build //..."
