@@ -7,25 +7,25 @@ update-rules:
       - "//..."
 
 pull-requests:
-  - enabled: true
-    limit: 10
-    branch-prefix: "steward"
-    base_branch: "main"
-    labels:
-      - "dependencies"
-    title-template: "⬆️ Update ${dependency} from ${currentVersion} to ${newVersion}"
-    body-template: |
-      ## Dependency Update
-      
-      📦 Dependency: `${dependency}`
-      📈 Current version: `${currentVersion}`
-      🎯 New version: `${newVersion}`
-      
-      ### Changelog
-      ${changelog}
-      
-      ### Type of update
-      ${updateType}
+  enabled: true  # Changed from array to object structure
+  limit: 10
+  branch-prefix: "steward"
+  target: "main"  # Explicitly setting target branch
+  labels:
+    - "dependencies"
+  title-template: "⬆️ Update ${dependency} from ${currentVersion} to ${newVersion}"
+  body-template: |
+    ## Dependency Update
+    
+    📦 Dependency: `${dependency}`
+    📈 Current version: `${currentVersion}`
+    🎯 New version: `${newVersion}`
+    
+    ### Changelog
+    ${changelog}
+    
+    ### Type of update
+    ${updateType}
 
 post-update-hooks:
   - pattern: ".*"
