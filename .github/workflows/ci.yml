@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout
+      - uses: actions/checkout@v4
 
       - name: Set up Bazel
         uses: bazelbuild/setup-bazelisk@v2
@@ -37,4 +37,4 @@ jobs:
         uses: VirtusLab/bazel-steward@v1.1.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          config-path: .bazel-steward.yaml
+          config-path: bazel-steward.yaml
