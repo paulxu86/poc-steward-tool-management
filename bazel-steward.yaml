@@ -1,25 +1,12 @@
 update-rules:
-  - name: "Bzlmod Dependencies"
-    kinds:
-      - name: "bzlmod"
-        types:
-          - "bazel_dep"
-        modules:
-          - pattern: "rules_.*"
-          - pattern: "aspect_.*"
-    paths:
-      - "MODULE.bazel"
-
-  - name: "Maven Dependencies"
-    kinds:
-      - name: "maven"
-        types:
-          - "maven.install"
-        artifacts:
-          - "org\\.springframework\\.boot:.*"
-          - "com\\.fasterxml\\.jackson\\.core:.*"
-    paths:
-      - "MODULE.bazel"
+  - kinds: bzlmod
+    enabled: true
+  - kinds: maven
+    enabled: true
+  - kinds: bazel
+    enabled: true
+  - kinds: bazel-rules
+    enabled: true
 
 pull-requests:
   enabled: true
