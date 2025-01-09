@@ -10,6 +10,7 @@ pull-requests:
   - enabled: true
     limit: 10
     branch-prefix: "steward"
+    base_branch: "main"
     labels:
       - "dependencies"
     title-template: "⬆️ Update ${dependency} from ${currentVersion} to ${newVersion}"
