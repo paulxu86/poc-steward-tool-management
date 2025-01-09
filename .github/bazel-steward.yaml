@@ -3,17 +3,28 @@ updates:
     targets:
       - "//..."
     patches:
-      # This will catch ALL Bazel rules including rules_java, rules_jvm_external, etc.
+      # Your existing patterns are good
       - groupId: "bazel_rules"
         groupName: "All Bazel rules"
         patterns:
-          - "^rules_.*"   # Matches any rule starting with "rules_"
-          - "^bazel_.*"   # Matches any rule starting with "bazel_"
+          - "^rules_.*"
+          - "^bazel_.*"
 
-      # Maven dependencies (both existing and future ones)
       - groupId: "maven_deps"
         groupName: "Maven dependencies"
         patterns:
-          - "^com\\..*"      # Matches com.fasterxml, com.google, etc.
-          - "^org\\..*"      # Matches org.springframework, org.mongodb, org.junit, etc.
-          - "^io\\..*"       # For io.* dependencies
+          - "^com\\..*"
+          - "^org\\..*"
+          - "^io\\..*"
+
+# Add these settings
+settings:
+  pullRequests:
+    enabled: true
+    limit: 10  # Maximum number of open PRs
+    branch:
+      prefix: "steward"  # PRs will be created with this prefix
+  commits:
+    message: "chore: update ${groupName} to ${version}"
+  labels:
+    - "dependencies"

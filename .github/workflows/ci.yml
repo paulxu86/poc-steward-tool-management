@@ -10,13 +10,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout
 
       - name: Set up Bazel
-        uses: bazelbuild/setup-bazelisk@95c9bf48d0c570bb3e28e57108f3450cd67c1a44 # v2
+        uses: bazelbuild/setup-bazelisk@v2
 
       - name: Mount bazel cache
-        uses: actions/cache@f4b3439a656ba812b8cb417d2d49f9c810103092 # v3
+        uses: actions/cache@v3
         with:
           path: "~/.cache/bazel"
           key: bazel-${{ runner.os }}-${{ hashFiles('MODULE.bazel', '.bazelversion') }}
@@ -27,3 +27,14 @@ jobs:
 
       - name: Build container
         run: bazel build //docker:tarball
+
+  steward:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Run Bazel Steward
+        uses: VirtusLab/bazel-steward@v1.1.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          config-path: .bazel-steward.yaml
