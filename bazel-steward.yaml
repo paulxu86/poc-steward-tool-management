@@ -4,9 +4,6 @@ update-rules:
       - name: "bzlmod"
         types:
           - "bazel_dep"
-        modules:
-          - pattern: "rules_.*"
-          - pattern: "aspect_.*"
     paths:
       - "MODULE.bazel"
 
@@ -15,9 +12,6 @@ update-rules:
       - name: "maven"
         types:
           - "maven.install"
-        artifacts:
-          - "org\\.springframework\\.boot:.*"
-          - "com\\.fasterxml\\.jackson\\.core:.*"
     paths:
       - "MODULE.bazel"
 
