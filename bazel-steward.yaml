@@ -1,37 +1,30 @@
 update-rules:
-  - name: "Bazel deps"
+  - kinds:
+      - "rules_.*"
+      - "bazel_.*"
+      - "maven"
     paths:
       - "//..."
-    kinds:
-      - name: "bazel_rules"
-        pattern: "^rules_.*"
-      - name: "bazel_dep"
-        pattern: "^bazel_.*"
-      - name: "maven_deps"
-        patterns:
-          - "^com\\..*"
-          - "^org\\..*"
-          - "^io\\..*"
 
 pull-requests:
-  enabled: true
-  limit: 10
-  branch-prefix: "steward"
-  labels:
-    - "dependencies"
-  title-template: "⬆️ Update ${dependency} from ${currentVersion} to ${newVersion}"
-  body-template: |
-    ## Dependency Update
-    
-    📦 Dependency: `${dependency}`
-    📈 Current version: `${currentVersion}`
-    🎯 New version: `${newVersion}`
-    
-    ### Changelog
-    ${changelog}
-    
-    ### Type of update
-    ${updateType}
+  - enabled: true
+    limit: 10
+    branch-prefix: "steward"
+    labels:
+      - "dependencies"
+    title-template: "⬆️ Update ${dependency} from ${currentVersion} to ${newVersion}"
+    body-template: |
+      ## Dependency Update
+      
+      📦 Dependency: `${dependency}`
+      📈 Current version: `${currentVersion}`
+      🎯 New version: `${newVersion}`
+      
+      ### Changelog
+      ${changelog}
+      
+      ### Type of update
+      ${updateType}
 
 post-update-hooks:
   - pattern: ".*"
