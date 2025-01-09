@@ -1,21 +1,29 @@
 update-rules:
-  - name: "Dependency Updates"  # Add a name for the rule group
+  - name: "Bzlmod Dependencies"
     kinds:
-      - name: "bzl_rules"   # Each kind needs a name
-        pattern: "rules_.*"
-      - name: "bazel_deps"
-        pattern: "bazel_.*"
-      - name: "maven_deps"
-        patterns:          # Maven can have multiple patterns
-          - "^org\\..*"
-          - "^com\\..*"
-          - "^io\\..*"
+      - name: "bzlmod"
+        types:
+          - "bazel_dep"
+        modules:
+          - pattern: "rules_.*"
+          - pattern: "aspect_.*"
     paths:
-      - "//..."
+      - "MODULE.bazel"
+
+  - name: "Maven Dependencies"
+    kinds:
+      - name: "maven"
+        types:
+          - "maven.install"
+        artifacts:
+          - "org\\.springframework\\.boot:.*"
+          - "com\\.fasterxml\\.jackson\\.core:.*"
+    paths:
+      - "MODULE.bazel"
 
 pull-requests:
   enabled: true
-  branch-prefix: "steward"
+  branch-prefix: "steward/"
   target: "main"
   limit: 10
   labels:

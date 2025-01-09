@@ -33,8 +33,13 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
       - name: Run Bazel Steward
         uses: VirtusLab/bazel-steward@v1.5.0
         with:
