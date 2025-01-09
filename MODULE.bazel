@@ -10,7 +10,7 @@ bazel_dep(name = "rules_oci", version = "1.7.2")
 bazel_dep(name = "rules_pkg", version = "0.9.1")
 bazel_dep(name = "aspect_bazel_lib", version = "2.7.0")
 
-SPRING_BOOT_VERSION = "3.3.7"
+SPRING_BOOT_VERSION = "3.4.1"
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
