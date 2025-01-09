@@ -1,4 +1,3 @@
-# Note the changed structure
 update-rules:
   - name: "Bazel deps"
     paths:
@@ -14,14 +13,25 @@ update-rules:
           - "^org\\..*"
           - "^io\\..*"
 
-# Add these settings
-settings:
-  pullRequests:
+pull-requests:
   enabled: true
   limit: 10
   branch-prefix: "steward"
   labels:
     - "dependencies"
+  title-template: "⬆️ Update ${dependency} from ${currentVersion} to ${newVersion}"
+  body-template: |
+    ## Dependency Update
+    
+    📦 Dependency: `${dependency}`
+    📈 Current version: `${currentVersion}`
+    🎯 New version: `${newVersion}`
+    
+    ### Changelog
+    ${changelog}
+    
+    ### Type of update
+    ${updateType}
 
 post-update-hooks:
   - pattern: ".*"
