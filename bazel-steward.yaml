@@ -1,19 +1,12 @@
 update-rules:
-  - name: "Bzlmod Dependencies"
-    kinds:
-      - name: "bzlmod"
-        types:
-          - "bazel_dep"
-    paths:
-      - "MODULE.bazel"
-
-  - name: "Maven Dependencies"
-    kinds:
-      - name: "maven"
-        types:
-          - "maven.install"
-    paths:
-      - "MODULE.bazel"
+  - kinds: bzlmod
+    enabled: true
+  - kinds: maven
+    enabled: true
+  - kinds: bazel
+    enabled: true
+  - kinds: bazel-rules
+    enabled: true
 
 pull-requests:
   enabled: true
