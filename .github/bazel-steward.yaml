@@ -1,53 +1,19 @@
 updates:
-  - name: "All dependencies"
+  - name: "Bazel deps"
     targets:
       - "//..."
     patches:
-      # Bazel rules (as above)
+      # This will catch ALL Bazel rules including rules_java, rules_jvm_external, etc.
       - groupId: "bazel_rules"
         groupName: "All Bazel rules"
         patterns:
-          - "^rules_.*"
-          - "^bazel_.*"
+          - "^rules_.*"   # Matches any rule starting with "rules_"
+          - "^bazel_.*"   # Matches any rule starting with "bazel_"
 
-      # Testing frameworks
-      - groupId: "testing"
-        groupName: "Testing dependencies"
+      # Maven dependencies (both existing and future ones)
+      - groupId: "maven_deps"
+        groupName: "Maven dependencies"
         patterns:
-          - "^org\\.junit.*"
-          - "^org\\.mockito.*"
-          - "^org\\.testng.*"
-
-      # Databases
-      - groupId: "databases"
-        groupName: "Database dependencies"
-        patterns:
-          - "^org\\.mongodb.*"
-          - "^mysql.*"
-          - "^org\\.postgresql.*"
-
-      # Spring Framework
-      - groupId: "spring"
-        groupName: "Spring dependencies"
-        patterns:
-          - "^org\\.springframework.*"
-
-      # JSON/XML processing
-      - groupId: "json_xml"
-        groupName: "JSON and XML dependencies"
-        patterns:
-          - "^com\\.fasterxml\\.jackson.*"
-          - "^javax\\.xml.*"
-          - "^org\\.json.*"
-
-      # Catch all other Maven dependencies
-      - groupId: "other_maven"
-        groupName: "Other Maven dependencies"
-        patterns:
-          - ".*"    # This will catch any dependency not caught by above patterns
-
-settings:
-  version:
-    update:
-      # This tells Bazel-steward to suggest both upgrades and downgrades
-      mode: "ANY"
+          - "^com\\..*"      # Matches com.fasterxml, com.google, etc.
+          - "^org\\..*"      # Matches org.springframework, org.mongodb, org.junit, etc.
+          - "^io\\..*"       # For io.* dependencies
